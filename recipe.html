@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Recipe Detail</title>
+    <style>
+        body {
+            font-family: 'Quicksand', sans-serif;
+            background: #f3f4f6;
+            padding: 40px;
+        }
+        .container {
+            max-width: 700px;
+            margin: auto;
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+        }
+        pre {
+            white-space: pre-wrap;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>👨‍🍳 Saved Recipe</h1>
+        <p><strong>Ingredients:</strong> {{ recipe.ingredients }}</p>
+        <p><strong>Date:</strong> {{ recipe.created_at.strftime('%Y-%m-%d %H:%M') }}</p>
+        <hr>
+        <pre>{{ recipe.recipe_text }}</pre>
+    </div>
+</body>
+</html>
